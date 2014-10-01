@@ -1,0 +1,55 @@
+<div ng-controller="homeCtrl">
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-xs-12 col-md-4">
+        <img src="images/bad_captcha01.png" alt="what"><br>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <img src="images/bad_captcha02.png" alt="what"><br>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <img src="images/bad_captcha03.png" alt="what"><br>
+      </div>
+    </div>
+    <h1>nobots</h1>
+    <p class="lead">
+      Because captchas are ugly as sin
+    </p>
+    <div class="row">
+      <div class="col-xs-12 col-md-4">
+        <img src="images/bad_captcha03.png"><br>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <img src="images/bad_captcha02.png"><br>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <img src="images/bad_captcha01.png"><br>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <h3>Have you ever...</h3>
+
+    <ul class="list-group">
+      <li ng-repeat="question in haveYouEver" class="list-group-item">
+        <span class="badge"><check-me></check-me></span>
+        {{ question.q }}
+      </li>
+    </ul>
+  </div>
+
+  <div ng-hide='readyForNobots' class="panel panel-danger">
+    <div class="panel-body">
+      <p>Really? None of those things bother you?</p>
+      <p><small>HINT: Click the X's</small></p>
+    </div>
+  </div>
+
+  <div ng-show='readyForNobots' class="panel panel-success">
+    <div class="panel-body">
+      <h2>GREAT!</p>
+      <p>How about we start fixing that problem?</p>
+    </div>
+  </div>
+</div>
