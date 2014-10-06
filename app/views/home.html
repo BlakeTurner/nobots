@@ -1,55 +1,37 @@
-<div ng-controller="homeCtrl">
-  <div class="jumbotron">
-    <div class="row">
-      <div class="col-xs-12 col-md-4">
-        <img src="images/bad_captcha01.png" alt="what"><br>
-      </div>
-      <div class="col-xs-12 col-md-4">
-        <img src="images/bad_captcha02.png" alt="what"><br>
-      </div>
-      <div class="col-xs-12 col-md-4">
-        <img src="images/bad_captcha03.png" alt="what"><br>
-      </div>
-    </div>
-    <h1>nobots</h1>
-    <p class="lead">
-      Because captchas are ugly as sin
-    </p>
-    <div class="row">
-      <div class="col-xs-12 col-md-4">
-        <img src="images/bad_captcha03.png"><br>
-      </div>
-      <div class="col-xs-12 col-md-4">
-        <img src="images/bad_captcha02.png"><br>
-      </div>
-      <div class="col-xs-12 col-md-4">
-        <img src="images/bad_captcha01.png"><br>
-      </div>
+<div class="row banner">
+  <img class="nobot" src="images/nobots_logo_large.png">
+  <img class="slogan" src="images/captchas.png">
+  <div class="slogan-text"><p class="lead">Because Captcha isn't getting any better</p></div>
+</div>
+
+<div class="container main-content home-content">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>While attempting to submit Captcha forms, have you ever...</h3>
     </div>
   </div>
 
   <div class="row">
-    <h3>Have you ever...</h3>
-
-    <ul class="list-group">
-      <li ng-repeat="question in haveYouEver" class="list-group-item">
-        <span class="badge"><check-me></check-me></span>
-        {{ question.q }}
-      </li>
-    </ul>
-  </div>
-
-  <div ng-hide='readyForNobots' class="panel panel-danger">
-    <div class="panel-body">
-      <p>Really? None of those things bother you?</p>
-      <p><small>HINT: Click the X's</small></p>
+    <div class="col-md-12">
+      <div class="panel-body">
+        <ul class="list-group">
+          <li ng-repeat="question in haveYouEver" class="list-group-item">
+            <p class="lead">
+              <span class="badge"><check-me></check-me></span>
+              {{ question.q }}
+            </p>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 
-  <div ng-show='readyForNobots' class="panel panel-success">
-    <div class="panel-body">
-      <h2>GREAT!</p>
-      <p>How about we start fixing that problem?</p>
-    </div>
+  <div ng-hide='readyForNobots' class="alert alert-danger">
+    <p class="lead"><strong>Sorry pal.</strong> I gotta know you're on board with me before we go any further. Click the X's to agree.</p>
+  </div>
+
+
+  <div ng-show='readyForNobots' class='text-center'>
+    <a class="btn btn-success" href="#how-it-works">Wanna see how we solve those problems?</a>
   </div>
 </div>

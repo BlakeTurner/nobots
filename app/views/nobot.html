@@ -1,0 +1,16 @@
+<div class="thumbnail" ng-hide='nobotArgs.nobotValid'>
+  <img class="img-rounded" ng-src="{{ nobotArgs.nobotFail ? nobotArgs.failImage : nobotArgs.image }}">
+  <div class="caption text-center">
+    <p class="lead">{{ nobotArgs.nobotFail ? nobotArgs.failCaption : nobotArgs.caption }}</p>
+    <form ng-hide='nobotArgs.nobotFail' ng-submit='attemptAnswer()' role="form">
+      <div class="form-group">
+        <input ng-model='guess' type="textfield" class="form-control" placeholder="Attempts remaining: {{ nobotArgs.attemptsAllowed - nobotArgs.attempts }}" required>
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+</div>
+
+<div class="alert alert-info nobot-valid" ng-show='nobotArgs.nobotValid'>
+  <h5>{{ nobotArgs.answerCaption }}</h5>
+</div>

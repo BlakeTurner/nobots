@@ -1,0 +1,46 @@
+[
+  {
+    "header": "Check out this bear holding a watermelon!",
+    "image": "images/watermelon_bear.jpg",
+    "failImage": "images/thumbsup-terminator.gif",
+    "caption": "What fruit is the bear holding?",
+    "failCaption": "Back where you came from, Terminator!",
+    "answer": "watermelon",
+    "answerCaption": "Thank you for proving your humanity! Your form has been submitted to the ether...",
+    "attemptsAllowed": 3,
+    "canDelete": false
+  },
+  {
+    "header": "Check out this militant cat!",
+    "image": "images/green_beret.jpg",
+    "failImage": "images/thumbsup-terminator.gif",
+    "caption": "What color is the cat's beret?",
+    "failCaption": "Back where you came from, Terminator!",
+    "answer": "green",
+    "answerCaption": "Thank you for proving your humanity! Your form has been submitted to the ether...",
+    "attemptsAllowed": 3,
+    "canDelete": false
+  },
+  {
+    "header": "Check out this well-groomed mug!",
+    "image": "images/mustache_mug.jpg",
+    "failImage": "images/thumbsup-terminator.gif",
+    "caption": "What facial hair does this mug possess?",
+    "failCaption": "Back where you came from, Terminator!",
+    "answer": "moustache",
+    "answerCaption": "Thank you for proving your humanity! Your form has been submitted to the ether...",
+    "attemptsAllowed": 3,
+    "canDelete": false
+  },
+  {
+    "header": "Check out this right-angle sandwich!",
+    "image": "images/right-triangle-sandwich.jpg",
+    "failImage": "images/thumbsup-terminator.gif",
+    "caption": "What geometric shape has this sandwich been cut into?",
+    "failCaption": "Back where you came from, Terminator!",
+    "answer": "triangle",
+    "answerCaption": "Thank you for proving your humanity! Your form has been submitted to the ether...",
+    "attemptsAllowed": 3,
+    "canDelete": false
+  }
+]

@@ -1,0 +1,46 @@
+<form name="nobotform" ng-submit="formArgs.submitAction(nobotform)">
+  <div class="row spacer">
+    <div class="col-md-12">
+      <label class="control-label">Main Image URL</label>
+      <input class="form-control" type="textfield" ng-model="formArgs.buildNobot.image" placeholder="http://placekitten.com/600/400" required />
+    </div>
+  </div>
+  <div class="row spacer">
+    <div class="col-md-12">
+      <label class="control-label">Main Caption</label>
+      <textarea class="form-control" ng-model="formArgs.buildNobot.caption" placeholder="A very specific question about your image" required />
+    </div>
+  </div>
+  <div class="row spacer">
+    <div class="col-md-12">
+      <label class="control-label">Fail Image URL</label>
+      <input class="form-control" type="textfield" ng-model="formArgs.buildNobot.failImage" placeholder="http://lorempixel.com/500/350/" required />
+    </div>
+  </div>
+  <div class="row spacer">
+    <div class="col-md-12">
+      <label class="control-label">Fail Caption</label>
+      <textarea class="form-control" ng-model="formArgs.buildNobot.failCaption" placeholder="We don't serve your kind here" required />
+    </div>
+  </div>
+  <div class="row spacer">
+    <div class="col-md-12">
+      <label class="control-label">Number of attempts allowed</label>
+      <input class="form-control" type="textfield" ng-model="formArgs.buildNobot.attempts" placeholder="Defaults to 3" required />
+    </div>
+  </div>
+  <div class="row spacer">
+    <div class="col-md-12">
+      <label class="control-label">Answer (case-insensitive)</label>
+      <input class="form-control" type="textfield" ng-model="formArgs.buildNobot.answer" placeholder="crodile" required />
+    </div>
+  </div>
+  <div class="row spacer">
+    <div class="col-md-6 col-xs-6">
+      <button type="button" class="btn btn-normal btn-block" ng-click="formArgs.resetAction(nobotform)">{{ formArgs.resetText }}</button>
+    </div>
+    <div class="col-md-6 col-xs-6">
+      <input type="submit" class="btn btn-primary btn-block" ng-value='formArgs.submitText' />
+    </div>
+  </div>
+</form>
