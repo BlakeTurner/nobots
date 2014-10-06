@@ -31,29 +31,6 @@ html body {
       color: #000066 !important;
     }
   }
-
-  .navbar-collapse {
-    border: none;
-
-    ul {
-
-
-      li {
-        background-color: #434a54;
-
-        a {
-          color: #bac3cf !important;
-          font-size: 1.8em;
-          font-weight: normal;
-
-          &:hover {
-            background-color: #707b8c;
-          }
-        }
-      }
-
-    }
-  }
 }
 
 .spacer {
@@ -144,6 +121,12 @@ html body {
 
   .navbar-custom {
     margin-bottom: 0px !important;
+
+    button.navbar-toggle {
+      background-color: #000066 !important;
+      border-color: #000066 !important;
+    }
+
   }
 
   .banner {
@@ -182,6 +165,32 @@ html body {
       padding-top: 20px;
     }
 
+  }
+
+
+  .navbar-collapse {
+    border: none;
+
+
+
+    ul {
+
+
+      li {
+        background-color: #434a54;
+
+        a {
+          color: #bac3cf !important;
+          font-size: 1.8em;
+          font-weight: normal;
+
+          &:hover {
+            background-color: #707b8c;
+          }
+        }
+      }
+
+    }
   }
 }
 
