@@ -3,34 +3,37 @@
   <p class="lead">Bots are smart and very fast, but they aren't <em>quirky</em>.</p>
 </div>
 
-<div class="container main-content" ng-repeat='demo in demoNobot'>
-  <div class="row">
-    <div class="col-md-12 text-center">
-      <h3>{{demo.header}}</h2>
-    </div>
-  </div>
-
-  <div class="row spacer how-it-works">
-    <div class="col-md-6 text-center">
-      <div class="thumbnail" ng-hide='demoActive'>
-        <img class="img-rounded" ng-src="{{demo.image}}">
+<div class="row">
+  <div class="container main-content" ng-repeat='demo in demoNobot'>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h3>{{demo.header}}</h2>
       </div>
-        <nobot  ng-show='demoActive' args='demo'></nobot>
     </div>
-    <div class="col-md-6">
-      <p class="lead">Who thought to take that picture? A <em>human being</em>!</p>
-      <p class="lead">Much like the fathers of the internet could not predict the popularity of cat videos, computers can't predict the strangess that is human behaviour.</p>
-      <p class="lead">So why can't our captcha just be a very specific question about this unexpected image? Something strange - maybe a little funny - that a bot would have a hell of a time guessing.</p>
-      <p class="lead">How about we all contribute these quirky Q/A pairs to a publicly accessible service? Sure, hackers can figure these out - they're smart people - but if we get enough continuous submissions, it'll be Sisyphean excercise!</p>
-      <button ng-hide="demoActive" type="button" class="btn btn-primary btn-block" ng-click="toggleDemoActive()">Give it a try!</button>
-      <button ng-click="nextDemo()" ng-show="demoActive"type="button" class="btn btn-primary btn-block">Try another!</a>
-    </div>
-  </div>
 
-  <div class="row spacer demo-button">
-    <div class="col-md-12 text-center">
-      <p class="lead">But what on earth has this got to do with me?</p>
-      <a class="btn btn-success btn-block" href="/#build">Build your own NoBot!</a>
+    <div class="row spacer how-it-works">
+      <div class="col-md-6 text-center">
+        <div class="thumbnail" ng-hide='demoActive'>
+          <img class="img-rounded" ng-src="{{demo.image}}">
+        </div>
+        <a class="anchor" id="nobot"></a>
+        <nobot ng-show='demoActive' args='demo'></nobot>
+      </div>
+      <div class="col-md-6">
+        <p class="lead">Who thought to take that picture? A <em>human being</em>!</p>
+        <p class="lead">Much like the fathers of the internet could not predict the popularity of cat videos, computers can't predict the strangess that is human behaviour.</p>
+        <p class="lead">So why can't our captcha just be a very specific question about this unexpected image? Something strange - maybe a little funny - that a bot would have a hell of a time guessing.</p>
+        <p class="lead">How about we all contribute these quirky Q/A pairs to a publicly accessible service? Sure, hackers can figure these out - they're smart people - but if we get enough continuous submissions, it'll be Sisyphean excercise!</p>
+        <button ng-hide="demoActive" type="button" class="btn btn-primary btn-block" ng-click="toggleDemoActive()">Give it a try!</button>
+        <button ng-click="nextDemo()" ng-show="demoActive"type="button" class="btn btn-primary btn-block">Try another!</a>
+      </div>
+    </div>
+
+    <div class="row spacer demo-button">
+      <div class="col-md-12 text-center">
+        <p class="lead">But what on earth has this got to do with me?</p>
+        <a class="btn btn-success btn-block" href="/#build">Build your own NoBot!</a>
+      </div>
     </div>
   </div>
 </div>

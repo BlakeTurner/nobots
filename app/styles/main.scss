@@ -7,6 +7,8 @@ html body {
   background-color: #ccc;
 }
 
+a.anchor{display: block; position: relative; top: -65px; visibility: hidden;}
+
 .navbar-custom {
   border-bottom: 5px solid #000066 !important;
   height: 65px;
@@ -114,11 +116,9 @@ html body {
 
 // Iphone
 @media (max-width: 768px) {
-  .container-fluid {
-    padding: 0px !important;
-    margin: 0px !important;
-  }
 
+  a.anchor{display: block; position: relative; top: 0px; visibility: hidden;}
+    
   .navbar-custom {
     margin-bottom: 0px !important;
 
@@ -134,7 +134,7 @@ html body {
     padding: 20px 0 0 0;
 
     .nobot {
-      width: 350px;
+      width: 300px;
       margin-bottom: 10px;
     }
 
@@ -151,6 +151,10 @@ html body {
     margin: 0 0;
     padding: 20px;
     background-color: #fff;
+
+    .nobot-cta a.btn {
+      font-size: 1.0em;
+    }
 
     /* Misc Styles */
     button.btn,

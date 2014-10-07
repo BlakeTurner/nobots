@@ -3,47 +3,49 @@
   <p class="lead">Every time a NoBot is born, a captcha dies!</p>
 </div>
 
-<div class="container main-content">
-  <div class="row">
-    <div class="col-md-12">
-      <div ng-show="flash.getMessage()" class="alert alert-success alert-dismissable">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-        <p class="lead">{{ flash.getMessage() }}</p>
+<div class="row">
+  <div class="container main-content">
+    <div class="row">
+      <div class="col-md-12">
+        <div ng-show="flash.getMessage()" class="alert alert-success alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+          <p class="lead">{{ flash.getMessage() }}</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="col-md-8">
-      <div class="nobot-index panel panel-default">
-        <div class="panel-heading">The NoBots Library</div>
-        <table class="table">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Caption</th>
-              <th></th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr ng-repeat="nobot in noBots" ng-class="{ active: activeIndex === $index }">
-              <td>{{ $index }}</td>
-              <td>{{ nobot.caption }}</td>
-              <td><span ng-click="setActive($index)" class="glyphicon glyphicon-play-circle"></span></td>
-              <td><span ng-show="nobot.canDelete" ng-click="remove($index)" class="glyphicon glyphicon-trash"></span></td>
-            </tr>
-          </tbody>
-        </table>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="nobot-index panel panel-default">
+          <div class="panel-heading">The NoBots Library</div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Caption</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="nobot in noBots" ng-class="{ active: activeIndex === $index }">
+                <td>{{ $index }}</td>
+                <td>{{ nobot.caption }}</td>
+                <td><span ng-click="setActive($index)" class="glyphicon glyphicon-play-circle"></span></td>
+                <td><span ng-show="nobot.canDelete" ng-click="remove($index)" class="glyphicon glyphicon-trash"></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-md-4" ng-repeat="active in activeNoBots">
+        <nobot args="active"></nobot>
       </div>
     </div>
-    <div class="col-md-4" ng-repeat="active in activeNoBots">
-      <nobot args="active"></nobot>
-    </div>
-  </div>
-  <div class="row spacer">
-    <div class="col-md-12" ng-hide="buildActive" >
-      <a class="btn btn-primary btn-block" href="#/build">Add your own!</a>
+    <div class="row spacer">
+      <div class="col-md-12" ng-hide="buildActive" >
+        <a class="btn btn-primary btn-block" href="#/build">Add your own!</a>
+      </div>
     </div>
   </div>
 </div>

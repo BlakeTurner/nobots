@@ -4,34 +4,37 @@
   <div class="slogan-text"><p class="lead">Because Captcha isn't getting any better</p></div>
 </div>
 
-<div class="container main-content home-content">
-  <div class="row">
-    <div class="col-md-12">
-      <h3>While attempting to submit Captcha forms, have you ever...</h3>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-12">
-      <div class="panel-body">
-        <ul class="list-group">
-          <li ng-repeat="question in haveYouEver" class="list-group-item">
-            <p class="lead">
-              <span class="badge"><check-me></check-me></span>
-              {{ question.q }}
-            </p>
-          </li>
-        </ul>
+<div class="row">
+  <div class="container main-content home-content">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>While attempting to submit Captcha forms, have you ever...</h3>
       </div>
     </div>
-  </div>
 
-  <div ng-hide='readyForNobots' class="alert alert-danger">
-    <p class="lead"><strong>Sorry pal.</strong> I gotta know you're on board with me before we go any further. Click the X's to agree.</p>
-  </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel-body">
+          <ul class="list-group">
+            <li ng-repeat="question in haveYouEver" class="list-group-item">
+              <p class="lead">
+                <span class="badge"><check-me></check-me></span>
+                {{ question.q }}
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
+    <div class="row nobot-cta" >
+      <div ng-hide='readyForNobots' class="alert alert-danger">
+        <p class="lead"><strong>Sorry pal.</strong> I gotta know you're on board with me before we go any further. Click the X's to agree.</p>
+      </div>
 
-  <div ng-show='readyForNobots' class='text-center'>
-    <a class="btn btn-success" href="#how-it-works">Wanna see how we solve those problems?</a>
+      <div ng-show='readyForNobots' class='text-center'>
+        <a class="btn btn-success" href="#how-it-works">Wanna see how we solve those problems?</a>
+      </div>
+    </div>
   </div>
 </div>

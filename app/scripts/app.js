@@ -95,9 +95,14 @@
   });
 
   // GET /#/how-it-works
-  app.controller('howItWorksCtrl', function($scope, $routeParams, $anchorScroll, $http, api) {
+  app.controller('howItWorksCtrl', function($scope, $routeParams, $anchorScroll, $location, $http, api) {
     // Scroll to top on new page load
     $anchorScroll();
+
+    var scrollToDemo = function() {
+      $location.hash('nobot');
+      $anchorScroll();
+    };
 
     // Initialize defaults
     var demoNobots;
@@ -116,7 +121,6 @@
     // Get demo nobots from api
     api.get(function(data) {
       demoNobots = data;
-      console.log(demoNobots);
       demoId = nextDemoId();
       $scope.demoNobot = [ demoNobots[demoId] ];
     });
@@ -124,6 +128,7 @@
     // Toggle demo active state
     $scope.toggleDemoActive = function() {
       $scope.demoActive = !$scope.demoActive;
+      scrollToDemo();
     };
 
     // Randomly render a new demo
@@ -135,6 +140,7 @@
       demoNobot.attempts = 0;
       demoNobot.nobotFail = false;
       $scope.demoNobot[0] = demoNobot;
+      scrollToDemo();
     };
   });
 
