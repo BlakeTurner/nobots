@@ -24,4 +24,4 @@ This app is totally static, with a fake API pulling from json files. It uses Loc
 
 ##This is as public as it gets!
 
-Feel free to happily plagiarize any of this code. It was all learned from books, videos, tutorials and a good amount of head scratching, so I'm happy to share. 
+This app uses the MIT licence, so feel free to happily plagiarize any of this code. It was all learned from books, videos, tutorials and a good amount of head scratching, so I'm happy to share. 
