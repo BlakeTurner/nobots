@@ -43,17 +43,22 @@
     Controllers
   */
 
-  // Navbar controller (active menu states)
+  // Navigation bar controller
   app.controller('navCtrl', function($scope, $location, $rootScope) {
+    // Hide navbar by default (visible on mobile only)
+    $scope.navbarVisible = false;
+
+    // See if an element's path is valid
     $scope.isActive = function (viewLocation) {
       return viewLocation === $location.path();
     };
 
-    $scope.navbarVisible = false;
+    // Toggle navbar visibility (mobile only)
     $scope.toggleNavbarVisible = function() {
       $scope.navbarVisible = !$scope.navbarVisible;
     };
 
+    // Hide mobile navbar when navigating from page to page
     $rootScope.$on('$routeChangeSuccess', function() {
       $scope.navbarVisible = false;
     });
