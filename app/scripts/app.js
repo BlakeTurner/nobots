@@ -116,6 +116,7 @@
     // Get demo nobots from api
     api.get(function(data) {
       demoNobots = data;
+      console.log(demoNobots);
       demoId = nextDemoId();
       $scope.demoNobot = [ demoNobots[demoId] ];
     });
